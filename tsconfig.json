@@ -10,7 +10,8 @@
         "rootDir": ".",
         "moduleResolution": "node",
         "resolveJsonModule": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "typeRoots": ["./node_modules/@types"]
     },
     "include": ["src/**/*", "interface/**/*"],
     "exclude": ["node_modules", "dist"]
