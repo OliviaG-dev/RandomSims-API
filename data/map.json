@@ -1,0 +1,117 @@
+[
+    {
+        "name": "Willow Creek",
+        "text": "Une vaste région verdoyante de marécages luxuriants et de terres de plantation ondoyantes où cohabitent agriculteurs aristocratiques, bourgeois du sud et résidents des marais. Willow Creek est un savant mélange de riches traditions, de grandeur sous-estimée et d'hospitalité inégalée.",
+        "img": "/images/icone_map/Willow_Creek.jpg"
+    },
+    {
+        "name": "Oasis Springs",
+        "text": "Oasis nichée dans la beauté austère du désert occidental, ce havre de culture éclectique est bordé d'innombrables palmiers et laisse passer les couleurs vivifiantes à travers ses paysages luxuriants. Oasis Springs offre aux voyageurs qui la découvrent un lieu de repos à l'abri du soleil.",
+        "img": "/images/icone_map/Oasis_Springs.jpg"
+    },
+    {
+        "name": "Newcrest",
+        "text": "Ne vous laissez pas tromper par l'abondance d'espace. Regardez autour de vous, admirez le superbe paysage et explorez les possibilités illimitées. Vous le voyez ? C'est votre tout nouveau monde ! Alors qu'attendez-vous ?",
+        "img": "/images/icone_map/Newcrest.jpg"
+    },
+    {
+        "name": "Magnolia Promenade",
+        "text": "Bienvenue dans un monde où de magnifiques paysages rencontrent la vie citadine ! Magnolia Promenade offre de fantastiques vues et une expérience de shopping haut de gamme pour les clients et les entreprises.",
+        "img": "/images/icone_map/Magnolia_Promenade.jpg"
+    },
+    {
+        "name": "Windenburg",
+        "text": "Prenez une grande respiration et profitez de l'air de la montagne. Ce vaste et vert terrain de jeu a tout : une campagne luxuriante, de sereines falaises rocheuses sur une île et un village pittoresque avec des vestiges de l'ancien monde nichés autour du quartier d'affaires moderne sur la côte.",
+        "img": "/images/icone_map/Windenburg.jpg"
+    },
+    {
+        "name": "San Myshuno",
+        "text": "Bienvenue en ville ! Chaque jour est une aventure dans les rues de San Myshuno. Des personnalités loufoques croisées dans les rues aux surprises que vous réservent les festivals, il y a toujours quelque chose de nouveau à découvrir !",
+        "img": "/images/icone_map/San_Myshuno.jpg"
+    },
+    {
+        "name": "Forgotten Hollow",
+        "text": "La petite ville de Forgotten Hollow n'a quasiment pas changé au cours de ses quatre générations d'existence. Tous ses fondateurs d'origine ont disparu peu après la création de la ville. Tous, sauf Vladislaus Straud. Son arrière petit-fils, Vladislaus Straud IV, veille encore sur la ville à ce jour.",
+        "img": "/images/icone_map/Forgotten_Hollow.jpg"
+    },
+    {
+        "name": "Brindleton Bay",
+        "text": "Située sur la côte est, Brindleton Bay est réputée pour l'obsession absolue de ses habitants pour tout ce qui concerne les chiens et les chats. Profitez des vues sur l'océan, de la riche histoire maritime et de tous vos nouveaux voisins à quatre pattes !",
+        "img": "/images/icone_map/Brindleton_Bay.jpg"
+    },
+    {
+        "name": "Del Sol Valley",
+        "text": "Participez au glamour de Del Sol Valley, un nouveau monde où vos Sims découvrent la célébrité. Achetez une maison modeste à Mirage Park ou travaillez dur pour devenir propriétaire dans le quartier The Pinnacles.",
+        "img": "/images/icone_map/Del_Sol_Valley.jpg"
+    },
+    {
+        "name": "StrangerVille",
+        "text": "Bienvenue à StrangerVille : La seule chose plus étrange que la population, c'est la flore ! StrangerVille est une petite ville paisible ayant un étrange problème. Les habitants sont très amicaux, mais la nuit, les choses deviennent plus intéressantes. Si vous souhaitez en savoir plus sur cette ville, allez voir les militaires qui se détendent au bar ou les scientifiques en train de faire des recherches à la bibliothèque. La boutique de curiosités près du terrain pour mobile homes propose aussi toutes sortes d'objets bizarres.",
+        "img": "/images/icone_map/StrangerVille.jpg"
+    },
+    {
+        "name": "Sulani",
+        "text": "Le magnifique archipel de Sulani vous accueille avec ses océans bleus et ses voisins amicaux. On trouve une grande diversité de Sims sur les îles principales, de la communauté très soudée d'Ohan'ali Town au luxueux quartier chic de Lani St. Taz en passant par la zone en apparence vide de Mua Pel'am. Où que vous regardiez, la beauté de la nature est partout.",
+        "img": "/images/icone_map/Sulani.jpg"
+    },
+    {
+        "name": "Glimmerbrook",
+        "text": "En apparence, Glimmerbrook est une ville paisible ordinaire ; mais la réalité pourrait bien être toute autre...",
+        "img": "/images/icone_map/Glimmerbrook.jpg"
+    },
+    {
+        "name": "Britechester",
+        "text": "Débutez un nouveau chapitre à l'Université historique de Britechester ou à l'Institut Foxbury plus moderne. Vivez dans un dortoir ou en dehors du campus dans la ville accueillante de Gibbs Hill. Explorez Britechester à vélo, passez du temps dans la salle commune et allez étudier à la bibliothèque. Soutenez les étudiants de votre établissement lors d'un événement, et portez les couleurs de votre université pour montrer la fierté de votre Sim.",
+        "img": "/images/icone_map/Britechester.jpg"
+    },
+    {
+        "name": "Evergreen Harbor",
+        "text": "Niché entre les collines de la forêt de conifères et les eaux du Willupette, Evergreen Harbor était autrefois le centre industriel de la région ; mais lorsque le monde a changé, la région a eu du mal à s'adapter. C'est aussi un endroit où les Sims tiennent à leur communauté et où maintenir des liens entre voisins n'est pas qu'un passe-temps. Evergreen Harbor doit désormais relever un défi de taille : créer son propre avenir. La seule question est : de quel genre d'avenir s'agira-t-il ?",
+        "img": "/images/icone_map/Evergreen_Harbor.jpg"
+    },
+    {
+        "name": "Mont Komorebi",
+        "text": "Les locaux profitent des sources chaudes curatives de Mont Komorebi depuis des siècles. Désormais, les visiteurs peuvent également en profiter grâce au complexe touristique moderne de sports d'hiver de Yukimatsu ! La région est devenue un lieu très recherché par les touristes en quête de détente mais aussi d'aventures. Avec autant de nouveaux visiteurs, il y a eu beaucoup de changements dans les forêts vallonnées qui entourent Mont Komorebi. Pourvu que la région parvienne à conserver le charme qui a fait son succès.",
+        "img": "/images/icone_map/Mt._Komorebi.jpg"
+    },
+    {
+        "name": "Henford-on-Bagley",
+        "text": "De la beauté naturelle des chutes Cordelia aux courants frais et limpides de la rivière Bagley, la rencontre de la terre et de l'eau fait d'Henford-on-Bagley un endroit où il est agréable de se promener et encore plus agréable d'habiter. Ici, les villageois sont attachés à l'histoire de la terre tout en étant amis avec les créatures à fourrure et à plumes qui vivent dans les bois. Alors peu importe si les voisins ont tendance à raconter des ragots ! Vous ne trouverez pas de meilleur endroit pour mener une vie plus proche de la nature.",
+        "img": "/images/icone_map/Henford_on_Bagley.jpg"
+    },
+    {
+        "name": "Tartosa",
+        "text": "La région côtière de Tartosa bénéficie depuis longtemps de paysages et de sites romantiques qui font d'elle le décor idéal pour l'amour et les projets matrimoniaux. Il n'est pas rare que les vacanciers et les couples en lune de miel reviennent chaque année pour revivre l'intimité de leurs précédents séjours. Ils disent qu'ici, il y a une histoire d'amour en devenir pour tout le monde. Posez des questions aux habitants de Tartosa, et ils vous parleront volontiers des frasques de l'industrie locale du mariage, ou du passé historique et plein d'amour de la région. Et même si un Sim ne trouve pas son âme sœur ici, une chose est sûre... il tombera à coup sûr amoureux de l'endroit.",
+        "img": "/images/icone_map/Tartosa.jpg"
+    },
+    {
+        "name": "Moonwood Mill",
+        "text": "Autrefois, Moonwood Mill était remplie de l'agitation et des sons de la scierie à proximité. Aujourd'hui, la ville est transformée. Les carcasses rouillées de son ancienne industrie procurent un abri à une poignée d'habitants mystérieux qui ont cherché cette communauté dissimulée dans la nature pour profiter de son côté isolé et anonyme. C'est un endroit qui a une histoire secrète, et ceux qui vivent ici savent que si vous creusez assez, vous découvrirez de fascinants secrets.",
+        "img": "/images/icone_map/Moonwood_Mil.jpg"
+    },
+    {
+        "name": "Copperdale",
+        "text": "Autrefois connue pour son industrie minière florissante, la pittoresque ville historique de Copperdale est nichée sur les rives du lac LaSuli. Son fondateur Jasper Prescott a cherché les précieux cristaux de cette terre, en espérant que Copperdale deviendrait un jour une communauté prospère pour les familles et les voyageurs. Et même si les chariots des mines se sont arrêtés pour toujours, les habitants de la ville continuent à s'épanouir. Offrant de belles opportunités d'éducation et d'aventures, Copperdale accueille désormais beaucoup de familles en quête d'une vie de petite ville avec des rêves de grande ville pour elles-mêmes et leurs adolescents. Ensemble, elles ont déniché quelque chose de bien plus précieux que les cristaux du passé : de merveilleux souvenirs de lycée.",
+        "img": "/images/icone_map/Copperdale.jpg"
+    },
+    {
+        "name": "San Sequoia",
+        "text": "San Sequoia était au départ une petite ville de pêche, avant de devenir un haut lieu de la pêche et de l'industrie de la conserverie sous l'influence d'un pêcheur local devenu entrepreneur, Bayani Robles. La famille Robles est encore très enracinée dans la région qui s'est étendue au fil du temps grâce à Gilbert Gilbers. Aujourd'hui, San Sequoia inclut des rues agréables, un magnifique parc avec des jardins, et des quartiers de banlieue paisibles. C'est l'endroit idéal pour élever une famille !",
+        "img": "/images/icone_map/San_Sequoia.jpg"
+    },
+    {
+        "name": "Chestnut Ridge",
+        "text": "Cette communauté s'est formée quand plusieurs groupes se sont réunis autour des liens forts qu'ils entretenaient avec les chevaux et leur terre. La région est rapidement devenue le centre de toutes les activités équestres : une ville imprégnée d'expertise en élevage et en dressage de chevaux, située dans un vaste et magnifique paysage. Au fil du temps, la région est devenue célèbre pour une autre activité, car son sol riche a permis la fabrication de nectar. Grâce au dure travail de tout le monde, la région a prospéré et est devenue la ville qu'est Chestnut Ridge aujourd'hui.",
+        "img": "/images/icone_map/Chestnut_Ridge.jpg"
+    },
+    {
+        "name": "Tomarang",
+        "text": "Issu des humbles racines de la côte de la mer de Shih, Tomarang est animé par la cuisine locale, le chaos communautaire et les légendes. Connu pour ses communautés soudées et ses espaces partagés baignés de soleil, Tomarang est un paysage luxuriant de possibilités. Venez vous rapprocher de la nature ou pêcher des gentillesses entre voisins et des secrets whimsimicales. Que vous viviez en solo ou que vous éleviez des générations, la région offre un accueil chaleureux à tout mode de vie multigénérationnel ! Sul Sul De-Kah !",
+        "img": "/images/icone_map/Tomarang.jpg"
+    },
+    {
+        "name": "Ciudad Enamorada",
+        "text": "Ville romantique par excellence, Ciudad Enamorada est connue pour sa multitude d'opportunités d'escapades romantiques et de rendez-vous scandaleux. Que vous ressentiez déjà un amour fou pour quelqu'un ou que vous soyez encore à la recherche de l'âme sœeur, cette ville vous fera vivre des moments passionnés. Les romantiques en herbe peuvent explorer Vista Hermosa pour sa vie de banlieue chaleureuse et accueillante, marcher main dans la main sous le coucher de soleil dans le quartier pittoresque et luxuriant de Plaza Mariposa, ou céder aux irrésistibles tentations de la vie noctume dans le quartier de Nuevo Corazón, où le modeme rencontre le traditionnel",
+        "img": "/images/icone_map/Enamorada.png"
+    }  
+]
