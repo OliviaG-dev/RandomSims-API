@@ -2,12 +2,8 @@ services:
   - type: web
     name: randomizer-sims-api
     env: node
-    buildCommand: pnpm install && pnpm build
-    startCommand: pnpm start
+    buildCommand: npm install && npm run build
+    startCommand: npm start
     envVars:
-      - key: NODE_VERSION
-        value: 18.17.0
-      - key: NPM_VERSION
-        value: 9.6.7
-      - key: PNPM_VERSION
-        value: 8.6.0
+      - key: NODE_ENV
+        value: production
