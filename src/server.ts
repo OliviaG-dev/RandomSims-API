@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import cors from "cors";
 import path from "path";
 import {
   Color,
@@ -24,6 +25,15 @@ import traitTerrain from "../data/traitTerrain.json";
 
 const app = express();
 const PORT = 3000;
+
+// Configuration CORS
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "http://localhost:3000"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 // Servir les fichiers d'images statiques
 app.use("/images", express.static(path.join(__dirname, "../images")));
