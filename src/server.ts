@@ -39,7 +39,7 @@ app.use(
 app.use("/images", express.static(path.join(__dirname, "../images")));
 
 // Route pour les aspirations
-app.get("/data/aspirations", (req: Request, res: Response) => {
+app.get("/data/aspiration", (req: Request, res: Response) => {
   const updatedAspirations = aspirations.map((aspiration: Aspiration) => ({
     ...aspiration,
     image: `${req.protocol}://${req.get("host")}/images${aspiration.image}`,
@@ -49,7 +49,7 @@ app.get("/data/aspirations", (req: Request, res: Response) => {
 });
 
 // Route pour les challenges
-app.get("/data/challenges", (req: Request, res: Response) => {
+app.get("/data/challenge", (req: Request, res: Response) => {
   const updatedChallenges = challenge.map((challenge: Challenge) => ({
     ...challenge,
     img: `${req.protocol}://${req.get("host")}/images${challenge.img}`,
@@ -58,7 +58,7 @@ app.get("/data/challenges", (req: Request, res: Response) => {
 });
 
 // Route pour les couleurs
-app.get("/data/colors", (req: Request, res: Response) => {
+app.get("/data/color", (req: Request, res: Response) => {
   const updatedColors = color.map((color: Color) => ({
     ...color,
   }));
@@ -66,7 +66,7 @@ app.get("/data/colors", (req: Request, res: Response) => {
 });
 
 // Route pour les défis de terrain
-app.get("/data/defis-terrain", (req: Request, res: Response) => {
+app.get("/data/defiTerrain", (req: Request, res: Response) => {
   const updatedDefisTerrain = defiTerrain.map((defi: DefiTerrain) => ({
     ...defi,
     img: `${req.protocol}://${req.get("host")}/images${defi.img}`,
@@ -75,7 +75,7 @@ app.get("/data/defis-terrain", (req: Request, res: Response) => {
 });
 
 // Route pour les jobs
-app.get("/data/jobs", (req: Request, res: Response) => {
+app.get("/data/job", (req: Request, res: Response) => {
   const updatedJobs = job.map((job: Job) => ({
     ...job,
     img: `${req.protocol}://${req.get("host")}/images${job.img}`,
@@ -84,7 +84,7 @@ app.get("/data/jobs", (req: Request, res: Response) => {
 });
 
 // Route pour les maps
-app.get("/data/maps", (req: Request, res: Response) => {
+app.get("/data/map", (req: Request, res: Response) => {
   const updatedMaps = map.map((map: Map) => ({
     ...map,
     img: `${req.protocol}://${req.get("host")}/images${map.img}`,
@@ -93,7 +93,7 @@ app.get("/data/maps", (req: Request, res: Response) => {
 });
 
 // Route pour les préférences de tueur
-app.get("/data/preferences-tueur", (req: Request, res: Response) => {
+app.get("/data/prefTue", (req: Request, res: Response) => {
   const updatedPrefTue = prefTue.map((pref: PrefTue) => ({
     ...pref,
     img: `${req.protocol}://${req.get("host")}/images${pref.img}`,
@@ -102,7 +102,7 @@ app.get("/data/preferences-tueur", (req: Request, res: Response) => {
 });
 
 // Route pour les traits
-app.get("/data/traits", (req: Request, res: Response) => {
+app.get("/data/trait", (req: Request, res: Response) => {
   const updatedTraits = trait.map((trait: Trait) => ({
     ...trait,
     image: `${req.protocol}://${req.get("host")}/images${trait.image}`,
@@ -111,7 +111,7 @@ app.get("/data/traits", (req: Request, res: Response) => {
 });
 
 // Route pour les traits de terrain
-app.get("/data/traits-terrain", (req: Request, res: Response) => {
+app.get("/data/traitTerrain", (req: Request, res: Response) => {
   const updatedTraitsTerrain = traitTerrain.map((trait: TraitTerrain) => ({
     ...trait,
     img: `${req.protocol}://${req.get("host")}/images${trait.img}`,
