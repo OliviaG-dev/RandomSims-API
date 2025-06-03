@@ -42,8 +42,8 @@ app.use("/images", express.static(path.join(__dirname, "../images")));
 app.get("/data/aspiration", (req: Request, res: Response) => {
   const updatedAspirations = aspirations.map((aspiration: Aspiration) => ({
     ...aspiration,
-    image: `${req.protocol}://${req.get("host")}/images${aspiration.image}`,
-    imgcat: `${req.protocol}://${req.get("host")}/images${aspiration.imgcat}`,
+    image: `${req.protocol}://${req.get("host")}${aspiration.image}`,
+    imgcat: `${req.protocol}://${req.get("host")}${aspiration.imgcat}`,
   }));
   res.json(updatedAspirations);
 });
@@ -52,7 +52,7 @@ app.get("/data/aspiration", (req: Request, res: Response) => {
 app.get("/data/challenge", (req: Request, res: Response) => {
   const updatedChallenges = challenge.map((challenge: Challenge) => ({
     ...challenge,
-    img: `${req.protocol}://${req.get("host")}/images${challenge.img}`,
+    img: `${req.protocol}://${req.get("host")}${challenge.img}`,
   }));
   res.json(updatedChallenges);
 });
@@ -69,7 +69,7 @@ app.get("/data/color", (req: Request, res: Response) => {
 app.get("/data/defiTerrain", (req: Request, res: Response) => {
   const updatedDefisTerrain = defiTerrain.map((defi: DefiTerrain) => ({
     ...defi,
-    img: `${req.protocol}://${req.get("host")}/images${defi.img}`,
+    img: `${req.protocol}://${req.get("host")}${defi.img}`,
   }));
   res.json(updatedDefisTerrain);
 });
@@ -78,7 +78,7 @@ app.get("/data/defiTerrain", (req: Request, res: Response) => {
 app.get("/data/job", (req: Request, res: Response) => {
   const updatedJobs = job.map((job: Job) => ({
     ...job,
-    img: `${req.protocol}://${req.get("host")}/images${job.img}`,
+    img: `${req.protocol}://${req.get("host")}${job.img}`,
   }));
   res.json(updatedJobs);
 });
@@ -87,7 +87,7 @@ app.get("/data/job", (req: Request, res: Response) => {
 app.get("/data/map", (req: Request, res: Response) => {
   const updatedMaps = map.map((map: Map) => ({
     ...map,
-    img: `${req.protocol}://${req.get("host")}/images${map.img}`,
+    img: `${req.protocol}://${req.get("host")}${map.img}`,
   }));
   res.json(updatedMaps);
 });
@@ -96,7 +96,7 @@ app.get("/data/map", (req: Request, res: Response) => {
 app.get("/data/prefTue", (req: Request, res: Response) => {
   const updatedPrefTue = prefTue.map((pref: PrefTue) => ({
     ...pref,
-    img: `${req.protocol}://${req.get("host")}/images${pref.img}`,
+    img: `${req.protocol}://${req.get("host")}${pref.img}`,
   }));
   res.json(updatedPrefTue);
 });
@@ -105,7 +105,7 @@ app.get("/data/prefTue", (req: Request, res: Response) => {
 app.get("/data/trait", (req: Request, res: Response) => {
   const updatedTraits = trait.map((trait: Trait) => ({
     ...trait,
-    image: `${req.protocol}://${req.get("host")}/images${trait.image}`,
+    image: `${req.protocol}://${req.get("host")}${trait.image}`,
   }));
   res.json(updatedTraits);
 });
@@ -114,7 +114,7 @@ app.get("/data/trait", (req: Request, res: Response) => {
 app.get("/data/traitTerrain", (req: Request, res: Response) => {
   const updatedTraitsTerrain = traitTerrain.map((trait: TraitTerrain) => ({
     ...trait,
-    img: `${req.protocol}://${req.get("host")}/images${trait.img}`,
+    img: `${req.protocol}://${req.get("host")}${trait.img}`,
   }));
   res.json(updatedTraitsTerrain);
 });
