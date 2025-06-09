@@ -1,6 +1,7 @@
-import express, { Request, Response } from "express";
+import express, { Request, Response, NextFunction } from "express";
 import cors from "cors";
 import path from "path";
+import compression from "compression";
 import {
   Color,
   Aspiration,
@@ -24,7 +25,7 @@ import trait from "../data/trait.json";
 import traitTerrain from "../data/traitTerrain.json";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Configuration CORS
 app.use(
@@ -40,97 +41,205 @@ app.use(
   })
 );
 
-// Servir les fichiers d'images statiques
-app.use("/images", express.static(path.join(__dirname, "../images")));
+// Ajouter la compression avec des options optimisées
+app.use(
+  compression({
+    level: 6, // Niveau de compression équilibré
+    threshold: 1024, // Compresser les réponses > 1KB
+  })
+);
+
+// Servir les fichiers d'images statiques avec cache
+app.use(
+  "/images",
+  express.static(path.join(__dirname, "../images"), {
+    maxAge: "1d", // Cache les images pendant 1 jour
+    etag: true,
+  })
+);
+
+// Cache pour stocker les données transformées
+const cache = new Map<string, any>();
+
+// Fonction utilitaire pour transformer les URLs
+const transformUrls = (data: any[], baseUrl: string) => {
+  return data.map((item: any) => {
+    const transformed = { ...item };
+    if (item.image) transformed.image = `${baseUrl}${item.image}`;
+    if (item.imgcat) transformed.imgcat = `${baseUrl}${item.imgcat}`;
+    if (item.img) transformed.img = `${baseUrl}${item.img}`;
+    return transformed;
+  });
+};
+
+// Middleware pour ajouter les headers de cache
+const addCacheHeaders = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): void => {
+  res.set("Cache-Control", "public, max-age=3600"); // Cache pendant 1 heure
+  next();
+};
 
 // Route pour les aspirations
-app.get("/data/aspiration", (req: Request, res: Response) => {
-  const updatedAspirations = aspirations.map((aspiration: Aspiration) => ({
-    ...aspiration,
-    image: `${req.protocol}://${req.get("host")}${aspiration.image}`,
-    imgcat: `${req.protocol}://${req.get("host")}${aspiration.imgcat}`,
-  }));
-  res.json(updatedAspirations);
-});
+app.get(
+  "/data/aspiration",
+  addCacheHeaders,
+  (req: Request, res: Response): void => {
+    const baseUrl = `${req.protocol}://${req.get("host")}`;
+    const cacheKey = `aspiration-${baseUrl}`;
+
+    if (cache.has(cacheKey)) {
+      res.json(cache.get(cacheKey));
+      return;
+    }
+
+    const updatedAspirations = transformUrls(aspirations, baseUrl);
+    cache.set(cacheKey, updatedAspirations);
+    res.json(updatedAspirations);
+  }
+);
 
 // Route pour les challenges
-app.get("/data/challenge", (req: Request, res: Response) => {
-  const updatedChallenges = challenge.map((challenge: Challenge) => ({
-    ...challenge,
-    img: `${req.protocol}://${req.get("host")}${challenge.img}`,
-  }));
-  res.json(updatedChallenges);
-});
+app.get(
+  "/data/challenge",
+  addCacheHeaders,
+  (req: Request, res: Response): void => {
+    const baseUrl = `${req.protocol}://${req.get("host")}`;
+    const cacheKey = `challenge-${baseUrl}`;
+
+    if (cache.has(cacheKey)) {
+      res.json(cache.get(cacheKey));
+      return;
+    }
+
+    const updatedChallenges = transformUrls(challenge, baseUrl);
+    cache.set(cacheKey, updatedChallenges);
+    res.json(updatedChallenges);
+  }
+);
 
 // Route pour les couleurs
-app.get("/data/color", (req: Request, res: Response) => {
-  const updatedColors = color.map((color: Color) => ({
-    ...color,
-  }));
-  res.json(updatedColors);
+app.get("/data/color", addCacheHeaders, (req: Request, res: Response): void => {
+  const cacheKey = "color";
+  if (cache.has(cacheKey)) {
+    res.json(cache.get(cacheKey));
+    return;
+  }
+  cache.set(cacheKey, color);
+  res.json(color);
 });
 
 // Route pour les défis de terrain
-app.get("/data/defiTerrain", (req: Request, res: Response) => {
-  const updatedDefisTerrain = defiTerrain.map((defi: DefiTerrain) => ({
-    ...defi,
-    img: `${req.protocol}://${req.get("host")}${defi.img}`,
-  }));
-  res.json(updatedDefisTerrain);
-});
+app.get(
+  "/data/defiTerrain",
+  addCacheHeaders,
+  (req: Request, res: Response): void => {
+    const baseUrl = `${req.protocol}://${req.get("host")}`;
+    const cacheKey = `defiTerrain-${baseUrl}`;
+
+    if (cache.has(cacheKey)) {
+      res.json(cache.get(cacheKey));
+      return;
+    }
+
+    const updatedDefisTerrain = transformUrls(defiTerrain, baseUrl);
+    cache.set(cacheKey, updatedDefisTerrain);
+    res.json(updatedDefisTerrain);
+  }
+);
 
 // Route pour les jobs
-app.get("/data/job", (req: Request, res: Response) => {
-  const updatedJobs = job.map((job: Job) => ({
-    ...job,
-    img: `${req.protocol}://${req.get("host")}${job.img}`,
-  }));
+app.get("/data/job", addCacheHeaders, (req: Request, res: Response): void => {
+  const baseUrl = `${req.protocol}://${req.get("host")}`;
+  const cacheKey = `job-${baseUrl}`;
+
+  if (cache.has(cacheKey)) {
+    res.json(cache.get(cacheKey));
+    return;
+  }
+
+  const updatedJobs = transformUrls(job, baseUrl);
+  cache.set(cacheKey, updatedJobs);
   res.json(updatedJobs);
 });
 
 // Route pour les maps
-app.get("/data/map", (req: Request, res: Response) => {
-  const updatedMaps = map.map((map: Map) => ({
-    ...map,
-    img: `${req.protocol}://${req.get("host")}${map.img}`,
-  }));
+app.get("/data/map", addCacheHeaders, (req: Request, res: Response): void => {
+  const baseUrl = `${req.protocol}://${req.get("host")}`;
+  const cacheKey = `map-${baseUrl}`;
+
+  if (cache.has(cacheKey)) {
+    res.json(cache.get(cacheKey));
+    return;
+  }
+
+  const updatedMaps = transformUrls(map, baseUrl);
+  cache.set(cacheKey, updatedMaps);
   res.json(updatedMaps);
 });
 
 // Route pour les préférences de tueur
-app.get("/data/prefTue", (req: Request, res: Response) => {
-  const updatedPrefTue = prefTue.map((pref: PrefTue) => ({
-    ...pref,
-    img: `${req.protocol}://${req.get("host")}${pref.img}`,
-  }));
-  res.json(updatedPrefTue);
-});
+app.get(
+  "/data/prefTue",
+  addCacheHeaders,
+  (req: Request, res: Response): void => {
+    const baseUrl = `${req.protocol}://${req.get("host")}`;
+    const cacheKey = `prefTue-${baseUrl}`;
+
+    if (cache.has(cacheKey)) {
+      res.json(cache.get(cacheKey));
+      return;
+    }
+
+    const updatedPrefTue = transformUrls(prefTue, baseUrl);
+    cache.set(cacheKey, updatedPrefTue);
+    res.json(updatedPrefTue);
+  }
+);
 
 // Route pour les traits
-app.get("/data/trait", (req: Request, res: Response) => {
-  const updatedTraits = trait.map((trait: Trait) => ({
-    ...trait,
-    image: `${req.protocol}://${req.get("host")}${trait.image}`,
-  }));
+app.get("/data/trait", addCacheHeaders, (req: Request, res: Response): void => {
+  const baseUrl = `${req.protocol}://${req.get("host")}`;
+  const cacheKey = `trait-${baseUrl}`;
+
+  if (cache.has(cacheKey)) {
+    res.json(cache.get(cacheKey));
+    return;
+  }
+
+  const updatedTraits = transformUrls(trait, baseUrl);
+  cache.set(cacheKey, updatedTraits);
   res.json(updatedTraits);
 });
 
 // Route pour les traits de terrain
-app.get("/data/traitTerrain", (req: Request, res: Response) => {
-  const updatedTraitsTerrain = traitTerrain.map((trait: TraitTerrain) => ({
-    ...trait,
-    img: `${req.protocol}://${req.get("host")}${trait.img}`,
-  }));
-  res.json(updatedTraitsTerrain);
-});
+app.get(
+  "/data/traitTerrain",
+  addCacheHeaders,
+  (req: Request, res: Response): void => {
+    const baseUrl = `${req.protocol}://${req.get("host")}`;
+    const cacheKey = `traitTerrain-${baseUrl}`;
+
+    if (cache.has(cacheKey)) {
+      res.json(cache.get(cacheKey));
+      return;
+    }
+
+    const updatedTraitsTerrain = transformUrls(traitTerrain, baseUrl);
+    cache.set(cacheKey, updatedTraitsTerrain);
+    res.json(updatedTraitsTerrain);
+  }
+);
 
 // Middleware pour gérer les erreurs 404
-app.use((req: Request, res: Response) => {
+app.use((req: Request, res: Response): void => {
   res.status(404).json({ error: "Route non trouvée" });
 });
 
 // Middleware pour gérer les erreurs globales
-app.use((err: Error, req: Request, res: Response, next: Function) => {
+app.use((err: Error, req: Request, res: Response, next: NextFunction): void => {
   console.error(err.stack);
   res.status(500).json({ error: "Une erreur est survenue sur le serveur" });
 });
