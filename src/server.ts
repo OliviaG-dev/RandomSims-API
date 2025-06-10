@@ -2,17 +2,6 @@ import express, { Request, Response, NextFunction } from "express";
 import cors from "cors";
 import path from "path";
 import compression from "compression";
-import {
-  Color,
-  Aspiration,
-  Challenge,
-  DefiTerrain,
-  Job,
-  Map,
-  PrefTue,
-  Trait,
-  TraitTerrain,
-} from "../interface/interfaces";
 
 import aspirations from "../data/aspiration.json";
 import challenge from "../data/challenge.json";
@@ -36,10 +25,33 @@ app.use(
       "https://random-sims.vercel.app",
       "https://random-sims-m7ksft8nt-oliviag-devs-projects.vercel.app",
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Accept",
+      "Origin",
+      "X-Requested-With",
+    ],
+    exposedHeaders: ["Content-Length", "Content-Type"],
+    credentials: true,
+    maxAge: 86400, // 24 heures
   })
 );
+
+// Ajouter des en-têtes CORS supplémentaires pour les ressources statiques
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  res.header("Cross-Origin-Resource-Policy", "cross-origin");
+  res.header("Cross-Origin-Embedder-Policy", "require-corp");
+  res.header("Cross-Origin-Opener-Policy", "same-origin");
+  next();
+});
 
 // Ajouter la compression avec des options optimisées
 app.use(
