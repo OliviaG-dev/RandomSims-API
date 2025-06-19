@@ -16,40 +16,79 @@ import traitTerrain from "../data/traitTerrain.json";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Configuration CORS
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "http://localhost:3000",
-      "https://random-sims.vercel.app",
-      "https://random-sims-m7ksft8nt-oliviag-devs-projects.vercel.app",
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "Accept",
-      "Origin",
-      "X-Requested-With",
-    ],
-    exposedHeaders: ["Content-Length", "Content-Type"],
-    credentials: true,
-    maxAge: 86400, // 24 heures
-  })
-);
+// Configuration CORS complète
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "http://localhost:4173",
+    "http://localhost:8080",
+    "https://random-sims.vercel.app",
+    "https://random-sims-m7ksft8nt-oliviag-devs-projects.vercel.app",
+    // Ajoutez ici d'autres domaines autorisés
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+  allowedHeaders: [
+    "Content-Type",
+    "Authorization",
+    "Accept",
+    "Origin",
+    "X-Requested-With",
+    "X-API-Key",
+    "Cache-Control",
+    "Pragma",
+    "Expires",
+  ],
+  exposedHeaders: [
+    "Content-Length",
+    "Content-Type",
+    "X-Total-Count",
+    "X-Page-Count",
+  ],
+  credentials: true,
+  maxAge: 86400, // 24 heures
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+};
 
-// Ajouter des en-têtes CORS supplémentaires pour les ressources statiques
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+// Appliquer la configuration CORS
+app.use(cors(corsOptions));
+
+// Middleware CORS personnalisé pour les en-têtes supplémentaires
+app.use((req: Request, res: Response, next: NextFunction) => {
+  // En-têtes CORS de base
+  res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+  );
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization, X-API-Key, Cache-Control, Pragma, Expires"
   );
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Max-Age", "86400");
+
+  // En-têtes de sécurité
   res.header("Cross-Origin-Resource-Policy", "cross-origin");
   res.header("Cross-Origin-Embedder-Policy", "require-corp");
   res.header("Cross-Origin-Opener-Policy", "same-origin");
+
+  // En-têtes de sécurité supplémentaires
+  res.header("X-Content-Type-Options", "nosniff");
+  res.header("X-Frame-Options", "DENY");
+  res.header("X-XSS-Protection", "1; mode=block");
+  res.header("Referrer-Policy", "strict-origin-when-cross-origin");
+
+  // En-têtes de performance
+  res.header("Vary", "Origin, Accept-Encoding");
+
+  // Gérer les requêtes OPTIONS (preflight)
+  if (req.method === "OPTIONS") {
+    res.status(204).end();
+    return;
+  }
+
   next();
 });
 
