@@ -21,7 +21,7 @@
     },
     {
         "name": "Internet rapide",
-        "img": "images/icone_traits_terrain/Internet_rapide.png"
+        "img": "/images/icone_traits_terrain/Internet_rapide.png"
     },
     {
         "name": "Lumière naturelle",
