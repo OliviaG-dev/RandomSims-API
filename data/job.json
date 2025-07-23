@@ -474,5 +474,19 @@
         "text": "Vous avez un don pour interpréter les sentiments, vous adorez le côté excitant des rencontres amoureuses et vous avez envie d'aider les autres à trouver le grand amour ? Votre destin est peut-être de devenir consultante en amour !",
         "branch": "Entremetteuse",
         "img": "/images/icone_job_adulte/Consultante_en_amour.png"
+    },
+    {
+        "id": "69",
+        "namejob": "Herbaliste",
+        "text": "Si ce Sim a apprécié l'art de la fabrication d'élixirs, la voie Pro des remèdes sera pour lui une évidence. Il devra maîtriser son art et continuer à aider d'autres Sims.",
+        "branch": "Pro des remèdes",
+        "img": "/images/icone_job_adulte/Herbaliste.png"
+    },
+    {
+        "id": "70",
+        "namejob": "Herbaliste",
+        "text": "Utilisez les ressources de la nature pour changer la vie des Sims en améliorant leur forme physique et leur alimentation. Laissez la branche Accompagnement au bien-être guider ce Sim dans son parcours !",
+        "branch": "Accompagnement au bien-être",
+        "img": "/images/icone_job_adulte/Herbaliste.png"
     }
 ]

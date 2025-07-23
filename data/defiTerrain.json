@@ -58,5 +58,9 @@
     {
         "name": "Problème d'entretien",
         "img": "/images/icone_defis_terrain/Probleme_d_entretient.png"
+    },
+    {
+        "name": "Cambriolage en série",
+        "img": "/images/icone_defis_terrain/Cambriolage_en_serie.png"
     }
 ]

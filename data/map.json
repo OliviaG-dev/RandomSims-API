@@ -113,5 +113,10 @@
         "name": "Ciudad Enamorada",
         "text": "Ville romantique par excellence, Ciudad Enamorada est connue pour sa multitude d'opportunités d'escapades romantiques et de rendez-vous scandaleux. Que vous ressentiez déjà un amour fou pour quelqu'un ou que vous soyez encore à la recherche de l'âme sœeur, cette ville vous fera vivre des moments passionnés. Les romantiques en herbe peuvent explorer Vista Hermosa pour sa vie de banlieue chaleureuse et accueillante, marcher main dans la main sous le coucher de soleil dans le quartier pittoresque et luxuriant de Plaza Mariposa, ou céder aux irrésistibles tentations de la vie noctume dans le quartier de Nuevo Corazón, où le modeme rencontre le traditionnel",
         "img": "/images/icone_map/Enamorada.png"
-    }  
+    }, 
+    {
+        "name": "Innisgreen",
+        "text": "L'île enchanteresse d'Innisgreen est connue pour sa beauté naturelle et ses communautés animées. Les Sims viennent de loin pour profiter de l'idyllique Sprucederry Grove, où le sol est généreux et où la vie s'épanouit en harmonie avec la nature. Dans la forêt mystique d'Everdew, la vie de fée et les relations avec elles offrent des expériences enchantées. L'aventure vous attend à Côte d'Adhmor, où la riche histoire et les secrets de l'île se dévoilent grâce à ses Sims sympathiques et ses monuments. Innisgreen est célèbre pour le développement de la compétence Apothicaire, qui attire les Sims ayant envie de travailler en harmonie avec la nature grâce aux pratiques holistiques dans la carrière Herbaliste",
+        "img": "/images/icone_map/Innisgreen.png"
+    }   
 ]

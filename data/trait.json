@@ -274,5 +274,17 @@
     {
         "name": "A un cœur d'artichaut",
         "image": "/images/icone_traits_adulte/Coeur_d_artichaut.png"
+    },
+    {
+        "name": "Fan de plantes",
+        "image": "/images/icone_traits_adulte/Fan_de_plantes.png"
+    },
+    {
+        "name": "Fauteur de troubles",
+        "image": "/images/icone_traits_adulte/Fauteur_de_troubles.png"
+    },
+    {
+        "name": "Mystique",
+        "image": "/images/icone_traits_adulte/Mystique.png"
     }
 ]

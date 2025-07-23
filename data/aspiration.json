@@ -454,5 +454,30 @@
         "cat": "Amour",
         "imgcat": "/images/icone_aspirations_adulte/cat/Amour.png",
         "image": "/images/icone_aspirations_adulte/Explorateur_en_amour.png"
+    },
+    {
+        "id": "58",
+        "name": "Spécialiste des elixirs",
+        "text": "Ce Sim veut apprendre tout ce qu'il y a à savoir sur la compétence Apothicaire, et fabriquer des remèdes et élixirs puissants avec des plantes.",
+        "cat": "Connaissance",
+        "imgcat": "/images/icone_aspirations_adulte/cat/Connaissance.png",
+        "image": "/images/icone_aspirations_adulte/Specialiste_des_elixirs.png"
+    },
+    {
+        "id": "59",
+        "name": "Nomade de la nature",
+        "text": "Ce Sim adore la vie dans la nature et aime satisfaire le moindre de ses besoins en plein air.",
+        "cat": "Nature",
+        "imgcat": "/images/icone_aspirations_adulte/cat/Nature.png",
+        "image": "/images/icone_aspirations_adulte/Nomade_de_la_nature.png"
+    },
+    {
+        "id": "60",
+        "name": "Histoires de fée",
+        "text": "Ce Sim veut montrer au monde entier le type de fée qu'il peut être.",
+        "cat": "Fée",
+        "imgcat": "/images/icone_aspirations_adulte/cat/Fee.png",
+        "image": "/images/icone_aspirations_adulte/Histoire_de_fee.png"
     }
+    
 ]
