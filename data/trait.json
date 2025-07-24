@@ -286,5 +286,17 @@
     {
         "name": "Mystique",
         "image": "/images/icone_traits_adulte/Mystique.png"
+    },
+    {
+        "name": "Louche",
+        "image": "/images/icone_traits_adulte/Louche.png"
+    },
+    {
+        "name": "Idéaliste",
+        "image": "/images/icone_traits_adulte/Idealiste.png"
+    },
+    {
+        "name": "Rabat-joie",
+        "image": "/images/icone_traits_adulte/Rabat_joie.png"
     }
 ]

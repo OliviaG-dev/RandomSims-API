@@ -138,5 +138,13 @@
     {
         "name": "Repaire de célibataire",
         "img": "/images/icone_traits_terrain/Repaire_de_celibataire.png"
+    },
+    {
+        "name": "Passage de fées",
+        "img": "/images/icone_traits_terrain/Passage_de_fees.png"
+    },
+    {
+        "name": "Sur terre sanctifiée",
+        "img": "/images/icone_traits_terrain/Sur_terre_sanctifiee.png"
     }
 ]
