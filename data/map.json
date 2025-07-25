@@ -118,5 +118,10 @@
         "name": "Innisgreen",
         "text": "L'île enchanteresse d'Innisgreen est connue pour sa beauté naturelle et ses communautés animées. Les Sims viennent de loin pour profiter de l'idyllique Sprucederry Grove, où le sol est généreux et où la vie s'épanouit en harmonie avec la nature. Dans la forêt mystique d'Everdew, la vie de fée et les relations avec elles offrent des expériences enchantées. L'aventure vous attend à Côte d'Adhmor, où la riche histoire et les secrets de l'île se dévoilent grâce à ses Sims sympathiques et ses monuments. Innisgreen est célèbre pour le développement de la compétence Apothicaire, qui attire les Sims ayant envie de travailler en harmonie avec la nature grâce aux pratiques holistiques dans la carrière Herbaliste",
         "img": "/images/icone_map/Innisgreen.png"
-    }   
+    }, 
+    {
+        "name": "Nordhaven",
+        "text": "Cette ville côtière nordique est connue pour ses entreprises locales indépendantes, prospères et la beauté enchanteresse de ses saisons froides. Promenez-vous dans le quartier historique de Gammelvik, incluant des rues pavées, une architecture classique et des canaux pittoresques ou prenez le train jusqu'à Iverstad et découvrez la manière dont les Sims du coin réinventent le centre ville industriel. Que vous cherchiez à faire prospérer votre entreprise ou juste pratiquer vos loisirs au sein d'une communauté accueillante, les opportunités sont illimitées.",
+        "img": "/images/icone_map/Nordhaven.png"
+    } 
 ]

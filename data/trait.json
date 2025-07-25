@@ -298,5 +298,13 @@
     {
         "name": "Rabat-joie",
         "image": "/images/icone_traits_adulte/Rabat_joie.png"
+    },
+    {
+        "name": "Marque populaire",
+        "image": "/images/icone_traits_adulte/Marque_populaire.png"
+    },
+    {
+        "name": "Présence motivante",
+        "image": "/images/icone_traits_adulte/Présence_motivante.png"
     }
 ]

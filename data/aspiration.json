@@ -478,6 +478,21 @@
         "cat": "Fée",
         "imgcat": "/images/icone_aspirations_adulte/cat/Fee.png",
         "image": "/images/icone_aspirations_adulte/Histoire_de_fee.png"
-    }
-    
+    },
+    {
+        "id": "61",
+        "name": "Entrepreneur estimé",
+        "text": "Ce Sim veut gérer une petite entreprise ayant une clientèle nombreuse et satisfaite, que ce soit grâce à des pratiques commerciales s'appuyant sur des rêves idéalistes ou à des fraudes rusées basées sur des méthodes pragmatiques.",
+        "cat": "Popularité",
+        "imgcat": "/images/icone_aspirations_adulte/cat/Popularite.png",
+        "image": "/images/icone_aspirations_adulte/Entrepreneur_estime.png"
+    },
+    {
+        "id": "62",
+        "name": "Mentor Magistral",
+        "text": "Ce Sim veut apprendre des choses auprès de mentor de talent, puis transmettre ces connaissances à d'autres Sims.",
+        "cat": "Connaissance",
+        "imgcat": "/images/icone_aspirations_adulte/cat/Connaissance.png",
+        "image": "/images/icone_aspirations_adulte/Mentor_magistral.png"
+    }    
 ]
